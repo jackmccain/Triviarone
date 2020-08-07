@@ -31,23 +31,21 @@
                 <img src="Logo.png">
             </div>
     </section>
-</body>
 
-</html>
-<script>
-    window.onload = sendApiRequest;
-    async function sendApiRequest() {
-        let response = await fetch("https://random.dog/woof.json");
-        console.log(response)
-        let data = await response.json();
-        console.log(data);
-        useApiData(data);
-    }
+    <script>
+        window.onload = sendApiRequest;
+        async function sendApiRequest() {
+            let response = await fetch("https://random.dog/woof.json");
+            console.log(response)
+            let data = await response.json();
+            console.log(data);
+            useApiData(data);
+        }
 
-    function useApiData(data) {
-        document.getElementById("image").innerHTML = "<img src =" + data.url + ">";
-    }
-</script>
+        function useApiData(data) {
+            document.getElementById("image").innerHTML = "<img src =" + data.url + ">";
+        }
+    </script>
 </body>
 
 </html>
